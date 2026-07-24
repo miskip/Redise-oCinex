@@ -4,8 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinex</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
+<!-- SECCIÓN 1: Barra superior (buscador, logo, notificaciones) -->
+<header>
+  <nav class="cinex-navbar">
+  <a href="#" class="cinex-brand">
+    <img src="https://www.cinex.com.ve/assets/images/xlogo.png.pagespeed.ic.g7fFsLLvP4.webp" alt="Cinex" class="cinex-logo" />
+  </a>
+
+  <ul class="cinex-links">
+    <li><a href="#">Cartelera</a></li>
+    <li><a href="#">Dulcería</a></li>
+    <li><a href="#">Estrenos</a></li>
+    <li><a href="#">Cines</a></li>
+    <li class="cinex-dropdown"><a href="#">Comercialización</a></li>
+    <li><a href="#">Contáctanos</a></li>
+    <li><a href="#">Exclusivo</a></li>
+  </ul>
+
+  <div class="cinex-extra">
+    <a href="#" class="cinex-ingresa">Ingresa</a>
+  </div>
+  </nav>
+</header>
+
+<section class="sugerencias-seccion">
+  <h2 class="sugerencias-titulo">Sugerencia Dinámico</h2>
+
+  <div class="sugerencias-grid">
+
+    <!-- Columna izquierda: tarjetas simples (imagen + título) -->
+    <div class="sugerencias-columna">
+      <div class="movie-card-simple">
+        <div class="movie-thumb"></div>
+        <div class="movie-info-simple">
+          <p class="movie-title-line"></p>
+          <p class="movie-title-line short"></p>
+        </div>
+      </div>
+
+      <div class="movie-card-simple">
+        <div class="movie-thumb"></div>
+        <div class="movie-info-simple">
+          <p class="movie-title-line"></p>
+          <p class="movie-title-line short"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna derecha: tarjeta con imagen + título + info destacada en rojo -->
+    <div class="sugerencias-columna">
+      <div class="movie-card-detalle">
+        <div class="movie-thumb"></div>
+        <div class="movie-info-detalle">
+          <p class="movie-title-line"></p>
+          <p class="movie-highlight-line"></p>
+          <p class="movie-highlight-line"></p>
+          <p class="movie-highlight-line short"></p>
+          <p class="movie-highlight-line"></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 </body>
 </html>
