@@ -1,0 +1,201 @@
+/* Importa la fuente "Inter" desde Google Fonts para usarla en todo el sitio. */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: rgb(3, 2, 2);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.cinex-navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;         /* antes 32px, ahora más compacto */
+  padding: 14px 32px;
+  background-color: #0038a8;
+}
+
+.cinex-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;          /* antes 32px */
+  flex: 1;
+}
+
+.cinex-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;  /* antes 1rem, ahora más pequeño */
+  letter-spacing: 0.01em;
+  white-space: nowrap;  /* evita que "Comercialización" se parta en 2 líneas */
+  transition: opacity 0.15s ease;
+}
+
+.cinex-links a:hover {
+  opacity: 0.8;
+}
+
+.cinex-extra {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+  margin-left: 12px;   /* nuevo: empuja el grupo un poco más a la derecha */
+}
+
+.cinex-ingresa {
+  background-color: #fff;
+  color: #0038a8;
+  padding: 10px 28px;  /* un poco más ancho para que se note el espacio extra */
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.cinex-brand {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.cinex-logo {
+  height: 32px;
+  width: auto;
+}
+
+.cinex-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.cinex-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: opacity 0.15s ease;
+}
+
+.cinex-links a:hover {
+  opacity: 0.75;
+}
+
+.cinex-ingresa {
+  flex-shrink: 0;
+  background-color: #fff;
+  color: #0033a0;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+/* Responsive: en mobile los links se ocultan detrás de un menú hamburguesa (opcional, avísame si lo necesitas) */
+@media (max-width: 800px) {
+  .cinex-links {
+    display: none;
+  }
+}
+.sugerencias-seccion {
+  padding: 20px;
+  border-top: 2px solid #000;
+  color: #000; /* ajusta si tu fondo real es oscuro */
+}
+
+.sugerencias-titulo {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.sugerencias-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  border-left: 2px solid #000; /* la línea divisoria vertical de tu boceto */
+  padding-left: 24px;
+}
+
+.sugerencias-columna {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Tarjeta simple (columna izquierda) --- */
+.movie-card-simple {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.movie-thumb {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.movie-info-simple {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.movie-title-line {
+  height: 10px;
+  background-color: #000;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.movie-title-line.short {
+  width: 60%;
+}
+
+/* --- Tarjeta con detalle en rojo (columna derecha) --- */
+.movie-card-detalle {
+  display: flex;
+  gap: 16px;
+}
+
+.movie-info-detalle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.movie-highlight-line {
+  height: 10px;
+  background-color: #8b0000;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.movie-highlight-line.short {
+  width: 70%;
+}
