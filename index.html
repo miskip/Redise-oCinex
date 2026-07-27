@@ -4,72 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinex</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-<!-- SECCIÓN 1: Barra superior (buscador, logo, notificaciones) -->
-<header>
-  <nav class="cinex-navbar">
-  <a href="#" class="cinex-brand">
-    <img src="https://www.cinex.com.ve/assets/images/xlogo.png.pagespeed.ic.g7fFsLLvP4.webp" alt="Cinex" class="cinex-logo" />
-  </a>
 
-  <ul class="cinex-links">
-    <li><a href="#">Cartelera</a></li>
-    <li><a href="#">Dulcería</a></li>
-    <li><a href="#">Estrenos</a></li>
-    <li><a href="#">Cines</a></li>
-    <li class="cinex-dropdown"><a href="#">Comercialización</a></li>
-    <li><a href="#">Contáctanos</a></li>
-    <li><a href="#">Exclusivo</a></li>
-  </ul>
-
-  <div class="cinex-extra">
-    <a href="#" class="cinex-ingresa">Ingresa</a>
-  </div>
-  </nav>
+<!-- SECCIÓN 1: Barra superior (logo + navegación) -->
+<header class="main-header">
+<nav>
+    <a href="#" class="logo">
+        <img src="https://www.cinex.com.ve/assets/images/xlogo.png.pagespeed.ic.g7fFsLLvP4.webp">
+    </a>
+    <!-- CONTROL  -->
+    <input type="checkbox" id="menu-check">
+    <label for="menu-check" class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+    <div class="nav-links">
+        <a href="#">Cartelera</a>
+        <a href="#">Dulcería</a>
+        <a href="#">Estrenos</a>
+        <a href="#">Cines</a>
+        <a href="#">Comercialización</a>
+        <a href="#">Contáctanos</a>
+        <a href="#" class="exclusive">
+            Exclusivo
+        </a>
+        <a href="#" class="login">
+            Ingresa
+        </a>
+    </div>
+</nav>
 </header>
 
-<section class="sugerencias-seccion">
-  <h2 class="sugerencias-titulo">Sugerencia Dinámico</h2>
-
-  <div class="sugerencias-grid">
-
-    <!-- Columna izquierda: tarjetas simples (imagen + título) -->
-    <div class="sugerencias-columna">
-      <div class="movie-card-simple">
-        <div class="movie-thumb"></div>
-        <div class="movie-info-simple">
-          <p class="movie-title-line"></p>
-          <p class="movie-title-line short"></p>
-        </div>
-      </div>
-
-      <div class="movie-card-simple">
-        <div class="movie-thumb"></div>
-        <div class="movie-info-simple">
-          <p class="movie-title-line"></p>
-          <p class="movie-title-line short"></p>
-        </div>
-      </div>
+<!-- SECCIÓN 2 BANNER-->
+<section class="banner-slider">
+    <div class="banner-controls">
+        <button class="banner-btn left">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="banner-btn right">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
     </div>
 
-    <!-- Columna derecha: tarjeta con imagen + título + info destacada en rojo -->
-    <div class="sugerencias-columna">
-      <div class="movie-card-detalle">
-        <div class="movie-thumb"></div>
-        <div class="movie-info-detalle">
-          <p class="movie-title-line"></p>
-          <p class="movie-highlight-line"></p>
-          <p class="movie-highlight-line"></p>
-          <p class="movie-highlight-line short"></p>
-          <p class="movie-highlight-line"></p>
+    <div class="banner-track">
+        <div class="banner-slide">
+            <img src="https://www.cinex.com.ve/assets/images/slider/xVITRINA-MK.png.pagespeed.ic.FMvlB5Ct6Z.webp">
         </div>
-      </div>
+        <div class="banner-slide">
+            <img src="https://www.cinex.com.ve/assets/images/slider/xodiseaaweb.jpg.pagespeed.ic.4d0-nWwZ2m.webp">
+        </div>
+        <div class="banner-slide">
+            <img src="https://www.cinex.com.ve/assets/images/slider/xMINIONS4DX_.jpg,281,29.jpeg.pagespeed.ic.8BQsHr2kRk.webp">
+        </div>
+        <div class="banner-slide">
+            <img src="https://www.cinex.com.ve/assets/images/slider/xVITRINASPIDERMAN.jpg.jpeg.pagespeed.ic.HQ9gKbkPh_.webp">
+        </div>
+        <div class="banner-slide">
+            <img src="https://www.cinex.com.ve/assets/images/slider/xmoana,282,292.jpg.pagespeed.ic.5AyvWHl1aL.webp">
+        </div>
+        <div class="banner-slide">
+            <img src="https://www.cinex.com.ve/assets/images/slider/xTOYSTORY.jpg.pagespeed.ic.-seyPdptaQ.webp">
+        </div>
+        <div class="banner-slide">
+            <img src="https://www.cinex.com.ve/assets/images/slider/xtoystorycombo.jpg.pagespeed.ic.pYSd_0ovqZ.webp">
+        </div>
     </div>
+</section>
 
+<!-- SECCIÓN 3 peliculas -->
+<section class="top-section">
+    <h2>TOP 5</h2>
+<section class="top5">
+    <input type="radio" id="s1" name="slider" checked>
+    <input type="radio" id="s2" name="slider">
+    <input type="radio" id="s3" name="slider">
+    <input type="radio" id="s4" name="slider">
+    <input type="radio" id="s5" name="slider">
+    <div class="coverflow">
+        <div class="card c1">
+            <img src="https://www.cinex.com.ve/assets/images/posters/x96fd9f94a33c9df85c6c1f934680f5bc.jpg.pagespeed.ic.KwsqKI_BZU.jpg">
+            <div class="card-text">
+                <h3>La Odisea</h3>
+                <h3>Sinopsis</h3>
+                <p>CEl legendario Odiseo enfrenta peligros épicos en su viaje de regreso a casa tras la Guerra de Troya. Se topa con criaturas míticas y dioses caprichosos, superando obstáculos increíbles antes de reunirse con su amada Penélope.</p>
+            </div>
+            <label for="s2" class="next">
+                <i class="fa-solid fa-chevron-down"></i>
+            </label>
+        </div>
+        <div class="card c2">
+            <img src="https://www.cinex.com.ve/assets/images/posters/x954951f20c65fe3d130e9f57372467ee.jpg.pagespeed.ic.lJBp4HWiXH.webp">
+            <div class="card-text">
+                <h3>TOY STORY 5</h3>
+                <h3>Sinopsis</h3>
+                <p>Cuando Bonnie recibe una tableta Lilypad como regalo y se obsesiona, los trabajos de Buzz, Woody, Jessie y el resto del grupo se vuelven exponencialmente más difíciles cuando tienen que enfrentarse a la nueva amenaza al tiempo de juego.</p>
+            </div>
+            <label for="s3" class="next">
+                <i class="fa-solid fa-chevron-down"></i>
+            </label>
+        </div>
+
+        <div class="card c3">
+            <img src="https://www.cinex.com.ve/assets/images/posters/x88a6bc81ceba2905a66b494e950bc281.jpg.pagespeed.ic.KnFzaDX9GS.webp">
+            <div class="card-text">
+                <h3>MINIONS Y MONSTRUOS</h3>
+                <p>La historia de cómo los Minions conquistaron Hollywood, se convirtieron en estrellas de cine, lo perdieron todo, desataron monstruos en el mundo y luego se unieron para intentar salvar al planeta del caos que acababan de crear.</p>
+            </div>
+            <label for="s4" class="next">
+                <i class="fa-solid fa-chevron-down"></i>
+            </label>
+        </div>
+
+        <div class="card c4">
+            <img src="https://www.cinex.com.ve/assets/images/posters/xedd5cddc9d89f53ffb3305f8b2668572.jpg.pagespeed.ic.AGiKTAfgKj.webp">
+            <div class="card-text">
+                <h3>MOANA 2026</h3>
+                <p>Moana que quiere ser una viajera marinera. Cuando su isla natal se ve amenazada, Moana debe adentrarse en el mar junto a un semidiós llamado Maui para salvar a su pueblo.</p>
+            </div>
+            <label for="s5" class="next">
+                <i class="fa-solid fa-chevron-down"></i>
+            </label>
+        </div>
+
+        <div class="card c5">
+            <img src="https://www.cinex.com.ve/assets/images/posters/xa793a0e117f690602f0a4fe3392c2790.jpg.pagespeed.ic.sskvX7I3wq.webp">
+            <div class="card-text">
+                <h3>EVIL DEAD EN LLAMAS</h3>
+                <p>Tras de la pérdida de su esposo, una mujer busca consuelo con sus suegros. A medida que uno a uno se transforman en deaítas, ella llega a descubrir que los votos que tomó en la vida - perviven incluso en la muerte.</p>
+            </div>
+            <label for="s1" class="next">
+                <i class="fa-solid fa-chevron-down"></i>
+            </label>
+        </div>
+    </div>
+    </section>
+</section>
+
+    <!-- Flechas visibles solo mientras está en modo automático (antes del primer clic) -->
+    <div class="carousel-arrows arrows-auto">
+      <label for="s5" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
+      <label for="s2" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
+    </div>
+    <!-- Flechas para cada diapositiva, apuntando a su vecina real (orden circular 1→2→3→4→5→1) -->
+    <div class="carousel-arrows arrows-1">
+      <label for="s5" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
+      <label for="s2" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
+    </div>
+    <div class="carousel-arrows arrows-2">
+      <label for="s1" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
+      <label for="s3" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
+    </div>
+    <div class="carousel-arrows arrows-3">
+      <label for="s2" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
+      <label for="s4" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
+    </div>
+    <div class="carousel-arrows arrows-4">
+      <label for="s3" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
+      <label for="s5" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
+    </div>
+    <div class="carousel-arrows arrows-5">
+      <label for="s4" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
+      <label for="s1" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
+    </div>
   </div>
 </section>
+
+
+
+
+
+
+
 </body>
 </html>
