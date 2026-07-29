@@ -40,7 +40,6 @@ SECCIÓN 2
 }
 
 /* FLECHAS */
-
 .banner-controls{
     position:absolute;
     top:50%;
@@ -72,42 +71,32 @@ SECCIÓN 2
     color:black;
 }
 @keyframes banner{
-
 0%,12%{
 transform:translateX(0%);
 }
-
 14%,26%{
 transform:translateX(-100%);
 }
-
 28%,40%{
 transform:translateX(-200%);
 }
-
 42%,54%{
 transform:translateX(-300%);
 }
-
 56%,68%{
 transform:translateX(-400%);
 }
-
 70%,82%{
 transform:translateX(-500%);
 }
-
 84%,100%{
 transform:translateX(-600%);
 }
-
 }
-
 
 /*
 SECCIÓN 3 TOP 5
 */
-
 .top-section{
     width:100%;
     max-width:1200px;
@@ -159,7 +148,7 @@ SECCIÓN 3 TOP 5
 .card-text{
     padding:25px 35px;
     color:white;
-    min-width:0; /* permite que el texto se achique dentro del flex, en vez de desbordar */
+    min-width:0; 
 }
 .card-text h3{
     font-size:29px;
@@ -185,7 +174,6 @@ SECCIÓN 3 TOP 5
 /* 
    PELÍCULA PRINCIPAL
  */
-
 #s1:checked ~ .coverflow .c1,
 #s2:checked ~ .coverflow .c2,
 #s3:checked ~ .coverflow .c3,
