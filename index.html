@@ -1,182 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinex</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cinex</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- SECCIÓN 1: Barra superior (logo + navegación) -->
+        <header class="bg-slate-900 py-4">
+            <nav class="max-w-[1200px] mx-auto flex items-center justify-center gap-5 px-5 relative">
+                <a href="#" class="shrink-0">
+                    <img src="banner/img1.webp" class="h-9" alt="Cinex">
+                </a>
 
-<!-- SECCIÓN 1: Barra superior (logo + navegación) -->
-<header class="main-header">
-<nav>
-    <a href="#" class="logo">
-        <img src="https://www.cinex.com.ve/assets/images/xlogo.png.pagespeed.ic.g7fFsLLvP4.webp">
-    </a>
-    <!-- CONTROL  -->
-    <input type="checkbox" id="menu-check">
-    <label for="menu-check" class="menu-icon">
-        <i class="fa-solid fa-bars"></i>
-    </label>
-    <div class="nav-links">
-        <a href="#">Cartelera</a>
-        <a href="#">Dulcería</a>
-        <a href="#">Estrenos</a>
-        <a href="#">Cines</a>
-        <a href="#">Comercialización</a>
-        <a href="#">Contáctanos</a>
-        <a href="#" class="exclusive">
-            Exclusivo
-        </a>
-        <a href="#" class="login">
-            Ingresa
-        </a>
-    </div>
-</nav>
-</header>
+                <input type="checkbox" id="menu-check" class="hidden peer">
+                <label for="menu-check" class="hidden max-[900px]:block text-white text-2xl cursor-pointer">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
 
-<!-- SECCIÓN 2 BANNER-->
-<section class="banner-slider">
-    <div class="banner-controls">
-        <button class="banner-btn left">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="banner-btn right">
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
-    </div>
-
-    <div class="banner-track">
-        <div class="banner-slide">
-            <img src="https://www.cinex.com.ve/assets/images/slider/xVITRINA-MK.png.pagespeed.ic.FMvlB5Ct6Z.webp">
-        </div>
-        <div class="banner-slide">
-            <img src="https://www.cinex.com.ve/assets/images/slider/xodiseaaweb.jpg.pagespeed.ic.4d0-nWwZ2m.webp">
-        </div>
-        <div class="banner-slide">
-            <img src="https://www.cinex.com.ve/assets/images/slider/xMINIONS4DX_.jpg,281,29.jpeg.pagespeed.ic.8BQsHr2kRk.webp">
-        </div>
-        <div class="banner-slide">
-            <img src="https://www.cinex.com.ve/assets/images/slider/xVITRINASPIDERMAN.jpg.jpeg.pagespeed.ic.HQ9gKbkPh_.webp">
-        </div>
-        <div class="banner-slide">
-            <img src="https://www.cinex.com.ve/assets/images/slider/xmoana,282,292.jpg.pagespeed.ic.5AyvWHl1aL.webp">
-        </div>
-        <div class="banner-slide">
-            <img src="https://www.cinex.com.ve/assets/images/slider/xTOYSTORY.jpg.pagespeed.ic.-seyPdptaQ.webp">
-        </div>
-        <div class="banner-slide">
-            <img src="https://www.cinex.com.ve/assets/images/slider/xtoystorycombo.jpg.pagespeed.ic.pYSd_0ovqZ.webp">
-        </div>
-    </div>
-</section>
-
-<!-- SECCIÓN 3 peliculas -->
-<section class="top-section">
-    <h2>TOP 5</h2>
-<section class="top5">
-    <input type="radio" id="s1" name="slider" checked>
-    <input type="radio" id="s2" name="slider">
-    <input type="radio" id="s3" name="slider">
-    <input type="radio" id="s4" name="slider">
-    <input type="radio" id="s5" name="slider">
-    <div class="coverflow">
-        <div class="card c1">
-            <img src="https://www.cinex.com.ve/assets/images/posters/x96fd9f94a33c9df85c6c1f934680f5bc.jpg.pagespeed.ic.KwsqKI_BZU.jpg">
-            <div class="card-text">
-                <h3>La Odisea</h3>
-                <h3>Sinopsis</h3>
-                <p>CEl legendario Odiseo enfrenta peligros épicos en su viaje de regreso a casa tras la Guerra de Troya. Se topa con criaturas míticas y dioses caprichosos, superando obstáculos increíbles antes de reunirse con su amada Penélope.</p>
+                <div class="flex items-center gap-2.5
+                            max-[900px]:hidden peer-checked:max-[900px]:flex
+                            max-[900px]:absolute max-[900px]:top-[70px] max-[900px]:left-0
+                            max-[900px]:w-full max-[900px]:bg-slate-900 max-[900px]:flex-col
+                            max-[900px]:p-5 max-[900px]:z-[1000]">
+                    <a href="#" class="text-white font-bold text-sm px-4 py-2.5 rounded-full hover:bg-white/10 max-[900px]:w-full max-[900px]:text-center">Cartelera</a>
+                    <a href="#" class="text-white font-bold text-sm px-4 py-2.5 rounded-full hover:bg-white/10 max-[900px]:w-full max-[900px]:text-center">Dulcería</a>
+                    <a href="#" class="text-white font-bold text-sm px-4 py-2.5 rounded-full hover:bg-white/10 max-[900px]:w-full max-[900px]:text-center">Estrenos</a>
+                    <a href="#" class="text-white font-bold text-sm px-4 py-2.5 rounded-full hover:bg-white/10 max-[900px]:w-full max-[900px]:text-center">Cines</a>
+                    <a href="#" class="text-white font-bold text-sm px-4 py-2.5 rounded-full hover:bg-white/10 max-[900px]:w-full max-[900px]:text-center">Comercialización</a>
+                    <a href="#" class="text-white font-bold text-sm px-4 py-2.5 rounded-full hover:bg-white/10 max-[900px]:w-full max-[900px]:text-center">Contáctanos</a>
+                    <a href="#" class="bg-cyan-400 text-slate-900 font-bold text-sm px-4 py-2.5 rounded-full max-[900px]:w-full max-[900px]:text-center">Exclusivo</a>
+                    <a href="#" class="bg-white text-slate-900 font-bold text-sm px-4 py-2.5 rounded-full max-[900px]:w-full max-[900px]:text-center">Ingresa</a>
+                </div>
+            </nav>
+        </header>
+    <!-- SECCIÓN 2 BANNER-->
+        <section class="banner-slider">
+            <div class="banner-controls">
+                <button class="banner-btn left">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="banner-btn right">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
-            <label for="s2" class="next">
-                <i class="fa-solid fa-chevron-down"></i>
-            </label>
-        </div>
-        <div class="card c2">
-            <img src="https://www.cinex.com.ve/assets/images/posters/x954951f20c65fe3d130e9f57372467ee.jpg.pagespeed.ic.lJBp4HWiXH.webp">
-            <div class="card-text">
-                <h3>TOY STORY 5</h3>
-                <h3>Sinopsis</h3>
-                <p>Cuando Bonnie recibe una tableta Lilypad como regalo y se obsesiona, los trabajos de Buzz, Woody, Jessie y el resto del grupo se vuelven exponencialmente más difíciles cuando tienen que enfrentarse a la nueva amenaza al tiempo de juego.</p>
+
+            <div class="banner-track">
+                <div class="banner-slide">
+                    <img src="banner/img2.png" alt="Combo Finish Him">
+                </div>
+                <div class="banner-slide">
+                    <img src="banner/img3.png">
+                </div>
+                <div class="banner-slide">
+                    <img src="banner/img4.png">
+                </div>
+                <div class="banner-slide">
+                    <img src="banner/img5.png">
+                </div>
+                <div class="banner-slide">
+                    <img src="banner/img6.png">
+                </div>
+                <div class="banner-slide">
+                    <img src="banner/img7.png">
+                </div>
+                <div class="banner-slide">
+                    <img src="banner/img8.png"">
+                </div>
             </div>
-            <label for="s3" class="next">
-                <i class="fa-solid fa-chevron-down"></i>
-            </label>
-        </div>
+        </section>
 
-        <div class="card c3">
-            <img src="https://www.cinex.com.ve/assets/images/posters/x88a6bc81ceba2905a66b494e950bc281.jpg.pagespeed.ic.KnFzaDX9GS.webp">
-            <div class="card-text">
-                <h3>MINIONS Y MONSTRUOS</h3>
-                <p>La historia de cómo los Minions conquistaron Hollywood, se convirtieron en estrellas de cine, lo perdieron todo, desataron monstruos en el mundo y luego se unieron para intentar salvar al planeta del caos que acababan de crear.</p>
+    <!-- SECCIÓN 3 peliculas -->
+        <section class="top-section">
+            <h2>TOP 5</h2>
+            <div class="top5">
+                <input type="radio" id="s1" name="slider" checked>
+                <input type="radio" id="s2" name="slider">
+                <input type="radio" id="s3" name="slider">
+                <input type="radio" id="s4" name="slider">
+                <input type="radio" id="s5" name="slider">
+                <div class="coverflow">
+                    <div class="card c1">
+                        <img src="img-top/img10.jpg">
+                        <div class="card-text">
+                            <h3>La Odisea</h3>
+                            <h3>Sinopsis</h3>
+                            <p>El legendario Odiseo enfrenta peligros épicos en su viaje de regreso a casa tras la Guerra 
+                            de Troya. Se topa con criaturas míticas y dioses caprichosos, superando obstáculos increíbles antes 
+                            de reunirse con su amada Penélope.</p>
+                        </div>
+                        <label for="s2" class="next">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                    </div>
+                    <div class="card c2">
+                        <img src="img-top/img11.jpg">
+                        <div class="card-text">
+                            <h3>TOY STORY 5</h3>
+                            <h3>Sinopsis</h3>
+                            <p>Cuando Bonnie recibe una tableta Lilypad como regalo y se obsesiona, los trabajos de Buzz, Woody,
+                            Jessie y el resto del grupo se vuelven exponencialmente más difíciles cuando tienen que enfrentarse
+                            a la nueva amenaza al tiempo de juego.</p>
+                        </div>
+                        <label for="s3" class="next">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                    </div>
+
+                    <div class="card c3">
+                        <img src="img-top/img12.jpg">
+                        <div class="card-text">
+                            <h3>MINIONS Y MONSTRUOS</h3>
+                            <h3>Sinopsis</h3>
+                            <p>La historia de cómo los Minions conquistaron Hollywood, se convirtieron en estrellas de cine,
+                                lo perdieron todo, desataron monstruos en el mundo y luego se unieron para intentar salvar 
+                                al planeta del caos que acababan de crear.</p>
+                        </div>
+                        <label for="s4" class="next">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                    </div>
+
+                    <div class="card c4">
+                        <img src="img-top/img13.jpg">
+                        <div class="card-text">
+                            <h3>MOANA 2026</h3>
+                            <h3>Sinopsis</h3>
+                            <p>Moana que quiere ser una viajera marinera. Cuando su isla natal se ve amenazada, Moana debe 
+                                adentrarse en el mar junto a un semidiós llamado Maui para salvar a su pueblo.</p>
+                        </div>
+                        <label for="s5" class="next">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                    </div>
+
+                    <div class="card c5">
+                        <img src="img-top/img14.jpg">
+                        <div class="card-text">
+                            <h3>EVIL DEAD EN LLAMAS</h3>
+                            <h3>Sinopsis</h3>
+                            <p>Tras de la pérdida de su esposo, una mujer busca consuelo con sus suegros. A medida que uno 
+                            a uno se transforman en deaítas, ella llega a descubrir que los votos que tomó en la vida 
+                            - perviven incluso en la muerte.</p>
+                        </div>
+                        <label for="s1" class="next">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                    </div>
+                </div>
+                <!-- Flechas visibles solo mientras está en modo automático (antes del primer clic) -->
+                <div class="carousel-arrows arrows-auto">
+                    <label for="s5" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
+                    <label for="s2" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
+                </div>
+                <!-- Flechas para cada diapositiva, apuntando a su vecina real (orden circular 1→2→3→4→5→1) -->
+                <div class="carousel-arrows arrows-1">
+                    <label for="s5" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
+                    <label for="s2" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
+                </div>
+                <div class="carousel-arrows arrows-2">
+                    <label for="s1" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
+                    <label for="s3" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
+                </div>
+                <div class="carousel-arrows arrows-3">
+                    <label for="s2" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
+                    <label for="s4" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
+                </div>
+                <div class="carousel-arrows arrows-4">
+                    <label for="s3" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
+                    <label for="s5" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
+                </div>
+                <div class="carousel-arrows arrows-5">
+                    <label for="s4" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
+                    <label for="s1" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
+                </div>
             </div>
-            <label for="s4" class="next">
-                <i class="fa-solid fa-chevron-down"></i>
-            </label>
-        </div>
+        </section>
 
-        <div class="card c4">
-            <img src="https://www.cinex.com.ve/assets/images/posters/xedd5cddc9d89f53ffb3305f8b2668572.jpg.pagespeed.ic.AGiKTAfgKj.webp">
-            <div class="card-text">
-                <h3>MOANA 2026</h3>
-                <p>Moana que quiere ser una viajera marinera. Cuando su isla natal se ve amenazada, Moana debe adentrarse en el mar junto a un semidiós llamado Maui para salvar a su pueblo.</p>
+    <!-- SECCIÓN 4: Cartelera -->
+        <section class="px-8 py-8">
+            <h2 class="text-white font-bold text-3xl mb-5">CARTELERA</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+
+                <!-- pelicula 1 -->
+                <div class="flex flex-col">
+                    <div class="group relative cursor-pointer overflow-hidden rounded-md">
+                        <img src="cartelera/img15.webp" alt="Spiderman un nuevo dia"
+                            class="w-full transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-x-0 bottom-0 bg-[#111]/95 text-white text-xs p-3
+                                    opacity-0 translate-y-2 pointer-events-none
+                                    group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                                    transition-all duration-200">
+                            <p class="mb-0.5">1:30 PM &middot; Sala 5 &middot; 45 disp.</p>
+                            <p class="mb-0.5">4:20 PM &middot; Sala 3 &middot; 12 disp.</p>
+                            <p class="mb-0.5">7:10 PM &middot; Sala 5 &middot; 60 disp.</p>
+                            <p class="mb-0.5">9:45 PM &middot; Sala 2 &middot; 8 disp.</p>
+                            <p class="mt-1 mb-2 text-[#aaa]">Idioma: Español</p>
+                            <a href="#" class="block w-full py-2 text-center bg-cyan-400 text-[#111] font-bold 
+                            rounded hover:bg-white transition-colors">Comprar</a>
+                        </div>
+                    </div>
+                    <p class="text-white text-sm font-semibold text-center mt-2">Spiderman un nuevo dia</p>
+                </div>
+                    <!-- pelicula 2 -->
+                <div class="flex flex-col">
+                    <div class="group relative cursor-pointer overflow-hidden rounded-md">
+                        <img src="cartelera/img16.webp" alt="Backrooms version extendida"
+                            class="w-full transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-x-0 bottom-0 bg-[#111]/95 text-white text-xs p-3
+                                    opacity-0 translate-y-2 pointer-events-none
+                                    group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                                    transition-all duration-200">
+                            <p class="mb-0.5">2:00 PM &middot; Sala 4 &middot; 30 disp.</p>
+                            <p class="mb-0.5">5:15 PM &middot; Sala 4 &middot; 5 disp.</p>
+                            <p class="mb-0.5">8:30 PM &middot; Sala 1 &middot; 50 disp.</p>
+                            <p class="mt-1 mb-2 text-[#aaa]">Idioma: Español</p>
+                            <a href="#" class="block w-full py-2 text-center bg-cyan-400 text-[#111] font-bold 
+                            rounded hover:bg-white transition-colors">Comprar</a>
+                        </div>
+                    </div>
+                    <p class="text-white text-sm font-semibold text-center mt-2">Backrooms version extendida</p>
+                </div>
+                    <!-- pelicula 3 -->
+                <div class="flex flex-col">
+                    <div class="group relative cursor-pointer overflow-hidden rounded-md">
+                        <img src="cartelera/img17.webp" alt="La Odisea"
+                            class="w-full transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-x-0 bottom-0 bg-[#111]/95 text-white text-xs p-3
+                                    opacity-0 translate-y-2 pointer-events-none
+                                    group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                                    transition-all duration-200">
+                            <p class="mb-0.5">1:00 PM &middot; Sala 6 &middot; 70 disp.</p>
+                            <p class="mb-0.5">4:00 PM &middot; Sala 6 &middot; 40 disp.</p>
+                            <p class="mb-0.5">7:00 PM &middot; Sala 2 &middot; 15 disp.</p>
+                            <p class="mb-0.5">10:00 PM &middot; Sala 6 &middot; 55 disp.</p>
+                            <p class="mt-1 mb-2 text-[#aaa]">Idioma: Español</p>
+                            <a href="#" class="block w-full py-2 text-center bg-cyan-400 text-[#111] font-bold 
+                            rounded hover:bg-white transition-colors">Comprar                            </a>
+                        </div>
+                    </div>
+                    <p class="text-white text-sm font-semibold text-center mt-2">La Odisea</p>
+                </div>
+                <!-- pelicula 4 -->
+                <div class="flex flex-col">
+                    <div class="group relative cursor-pointer overflow-hidden rounded-md">
+                        <img src="cartelera/img18.webp" alt="Moana 2026"
+                            class="w-full transition-transform duration-300 group-hover:scale-105">
+
+                        <div class="absolute inset-x-0 bottom-0 bg-[#111]/95 text-white text-xs p-3
+                                    opacity-0 translate-y-2 pointer-events-none
+                                    group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                                    transition-all duration-200">
+                            <p class="mb-0.5">12:30 PM &middot; Sala 7 &middot; 80 disp.</p>
+                            <p class="mb-0.5">3:30 PM &middot; Sala 7 &middot; 65 disp.</p>
+                            <p class="mb-0.5">6:30 PM &middot; Sala 3 &middot; 20 disp.</p>
+                            <p class="mt-1 mb-2 text-[#aaa]">Idioma: Español</p>
+                            <a href="#" class="block w-full py-2 text-center bg-cyan-400 text-[#111] font-bold 
+                            rounded hover:bg-white transition-colors">Comprar</a>
+                        </div>
+                    </div>
+                    <p class="text-white text-sm font-semibold text-center mt-2">Moana 2026</p>
+                </div>
+                    <!-- pelicula 5 -->
+                <div class="flex flex-col">
+                    <div class="group relative cursor-pointer overflow-hidden rounded-md">
+                        <img src="cartelera/img19.webp" alt="Evil dead en llamas"
+                            class="w-full transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-x-0 bottom-0 bg-[#111]/95 text-white text-xs p-3
+                                    opacity-0 translate-y-2 pointer-events-none
+                                    group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                                    transition-all duration-200">
+                            <p class="mb-0.5">3:45 PM &middot; Sala 1 &middot; 10 disp.</p>
+                            <p class="mb-0.5">6:45 PM &middot; Sala 1 &middot; 3 disp.</p>
+                            <p class="mb-0.5">9:30 PM &middot; Sala 4 &middot; 25 disp.</p>
+                            <p class="mt-1 mb-2 text-[#aaa]">Idioma: Español</p>
+                            <a href="#" class="block w-full py-2 text-center bg-cyan-400 text-[#111] font-bold 
+                                        rounded hover:bg-white transition-colors">Comprar</a>
+                        </div>
+                    </div>
+                    <p class="text-white text-sm font-semibold text-center mt-2">Evil dead en llamas</p>
+                </div>
+                    <!-- pelicula 6 -->
+                <div class="flex flex-col">
+                    <div class="group relative cursor-pointer overflow-hidden rounded-md">
+                        <img src="cartelera/img20.webp" alt="Minions y monstruos"
+                            class="w-full transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-x-0 bottom-0 bg-[#111]/95 text-white text-xs p-3
+                                    opacity-0 translate-y-2 pointer-events-none
+                                    group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                                    transition-all duration-200">
+                            <p class="mb-0.5">11:00 AM &middot; Sala 7 &middot; 90 disp.</p>
+                            <p class="mb-0.5">1:45 PM &middot; Sala 7 &middot; 72 disp.</p>
+                            <p class="mb-0.5">4:15 PM &middot; Sala 3 &middot; 30 disp.</p>
+                            <p class="mt-1 mb-2 text-[#aaa]">Idioma: Español</p>
+                            <a href="#" class="block w-full py-2 text-center bg-cyan-400 text-[#111] font-bold 
+                            rounded hover:bg-white transition-colors">Comprar</a>
+                        </div>
+                    </div>
+                    <p class="text-white text-sm font-semibold text-center mt-2">Minions y monstruos</p>
+                </div>
+                    <!-- pelicula 7 -->
+                <div class="flex flex-col">
+                    <div class="group relative cursor-pointer overflow-hidden rounded-md">
+                        <img src="cartelera/img21.webp" alt="Supergirl"
+                            class="w-full transition-transform duration-300 group-hover:scale-105">
+
+                        <div class="absolute inset-x-0 bottom-0 bg-[#111]/95 text-white text-xs p-3
+                                    opacity-0 translate-y-2 pointer-events-none
+                                    group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                                    transition-all duration-200">
+                            <p class="mb-0.5">2:15 PM &middot; Sala 2 &middot; 18 disp.</p>
+                            <p class="mb-0.5">5:30 PM &middot; Sala 5 &middot; 42 disp.</p>
+                            <p class="mb-0.5">8:45 PM &middot; Sala 5 &middot; 9 disp.</p>
+                            <p class="mt-1 mb-2 text-[#aaa]">Idioma: Español</p>
+                            <a href="#" class="block w-full py-2 text-center bg-cyan-400 text-[#111] font-bold 
+                                rounded hover:bg-white transition-colors">Comprar</a>
+                        </div>
+                    </div>
+                    <p class="text-white text-sm font-semibold text-center mt-2">Supergirl</p>
+                </div>
+                    <!-- pelicula 8 -->
+                <div class="flex flex-col">
+                    <div class="group relative cursor-pointer overflow-hidden rounded-md">
+                        <img src="cartelera/img22.webp" alt="Toy story 5"
+                            class="w-full transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-x-0 bottom-0 bg-[#111]/95 text-white text-xs p-3
+                                    opacity-0 translate-y-2 pointer-events-none
+                                    group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                                    transition-all duration-200">
+                            <p class="mb-0.5">12:00 PM &middot; Sala 7 &middot; 85 disp.</p>
+                            <p class="mb-0.5">2:45 PM &middot; Sala 7 &middot; 50 disp.</p>
+                            <p class="mb-0.5">5:15 PM &middot; Sala 3 &middot; 22 disp.</p>
+                            <p class="mt-1 mb-2 text-[#aaa]">Idioma: Español</p>
+                            <a href="#" class="block w-full py-2 text-center bg-cyan-400 text-[#111] font-bold
+                                 rounded hover:bg-white transition-colors">Comprar</a>
+                        </div>
+                    </div>
+                    <p class="text-white text-sm font-semibold text-center mt-2">Toy story 5</p>
+                </div>
+                    <!-- pelicula 9 -->
+                <div class="flex flex-col">
+                    <div class="group relative cursor-pointer overflow-hidden rounded-md">
+                        <img src="cartelera/img23.webp" alt="El dia de la revelacion"
+                            class="w-full transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-x-0 bottom-0 bg-[#111]/95 text-white text-xs p-3
+                                    opacity-0 translate-y-2 pointer-events-none
+                                    group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                                    transition-all duration-200">
+                            <p class="mb-0.5">4:30 PM &middot; Sala 1 &middot; 14 disp.</p>
+                            <p class="mb-0.5">7:30 PM &middot; Sala 1 &middot; 4 disp.</p>
+                            <p class="mb-0.5">10:15 PM &middot; Sala 4 &middot; 33 disp.</p>
+                            <p class="mt-1 mb-2 text-[#aaa]">Idioma: Español</p>
+                            <a href="#" class="block w-full py-2 text-center bg-cyan-400 text-[#111] font-bold 
+                            rounded hover:bg-white transition-colors">Comprar</a>
+                        </div>
+                    </div>
+                    <p class="text-white text-sm font-semibold text-center mt-2">El dia de la revelacion</p>
+                </div>
+                    <!-- pelicula 10 -->
+                <div class="flex flex-col">
+                    <div class="group relative cursor-pointer overflow-hidden rounded-md">
+                        <img src="cartelera/img24.webp" alt="Scary movie 6"
+                            class="w-full transition-transform duration-300 group-hover:scale-105">
+
+                        <div class="absolute inset-x-0 bottom-0 bg-[#111]/95 text-white text-xs p-3
+                                    opacity-0 translate-y-2 pointer-events-none
+                                    group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                                    transition-all duration-200">
+                            <p class="mb-0.5">1:15 PM &middot; Sala 2 &middot; 28 disp.</p>
+                            <p class="mb-0.5">4:45 PM &middot; Sala 2 &middot; 16 disp.</p>
+                            <p class="mb-0.5">8:00 PM &middot; Sala 5 &middot; 48 disp.</p>
+                            <p class="mt-1 mb-2 text-[#aaa]">Idioma: Español</p>
+                            <a href="#" class="block w-full py-2 text-center bg-cyan-400 text-[#111] font-bold 
+                                rounded hover:bg-white transition-colors">Comprar</a>
+                        </div>
+                    </div>
+                    <p class="text-white text-sm font-semibold text-center mt-2">Scary movie 6</p>
+                </div>
+                    <!-- pelicula 11 -->
+                <div class="flex flex-col">
+                    <div class="group relative cursor-pointer overflow-hidden rounded-md">
+                        <img src="cartelera/img25.webp" alt="Backrooms"
+                            class="w-full transition-transform duration-300 group-hover:scale-105">
+
+                        <div class="absolute inset-x-0 bottom-0 bg-[#111]/95 text-white text-xs p-3
+                                    opacity-0 translate-y-2 pointer-events-none
+                                    group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                                    transition-all duration-200">
+                            <p class="mb-0.5">3:00 PM &middot; Sala 4 &middot; 20 disp.</p>
+                            <p class="mb-0.5">6:15 PM &middot; Sala 4 &middot; 6 disp.</p>
+                            <p class="mb-0.5">9:00 PM &middot; Sala 1 &middot; 38 disp.</p>
+                            <p class="mt-1 mb-2 text-[#aaa]">Idioma: Español</p>
+                            <a href="#" class="block w-full py-2 text-center bg-cyan-400 text-[#111] font-bold
+                                 rounded hover:bg-white transition-colors">Comprar</a>
+                        </div>
+                    </div>
+                    <p class="text-white text-sm font-semibold text-center mt-2">Backrooms</p>
+                </div>
             </div>
-            <label for="s5" class="next">
-                <i class="fa-solid fa-chevron-down"></i>
-            </label>
-        </div>
-
-        <div class="card c5">
-            <img src="https://www.cinex.com.ve/assets/images/posters/xa793a0e117f690602f0a4fe3392c2790.jpg.pagespeed.ic.sskvX7I3wq.webp">
-            <div class="card-text">
-                <h3>EVIL DEAD EN LLAMAS</h3>
-                <p>Tras de la pérdida de su esposo, una mujer busca consuelo con sus suegros. A medida que uno a uno se transforman en deaítas, ella llega a descubrir que los votos que tomó en la vida - perviven incluso en la muerte.</p>
-            </div>
-            <label for="s1" class="next">
-                <i class="fa-solid fa-chevron-down"></i>
-            </label>
-        </div>
-    </div>
-    </section>
-</section>
-
-    <!-- Flechas visibles solo mientras está en modo automático (antes del primer clic) -->
-    <div class="carousel-arrows arrows-auto">
-      <label for="s5" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
-      <label for="s2" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
-    </div>
-    <!-- Flechas para cada diapositiva, apuntando a su vecina real (orden circular 1→2→3→4→5→1) -->
-    <div class="carousel-arrows arrows-1">
-      <label for="s5" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
-      <label for="s2" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
-    </div>
-    <div class="carousel-arrows arrows-2">
-      <label for="s1" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
-      <label for="s3" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
-    </div>
-    <div class="carousel-arrows arrows-3">
-      <label for="s2" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
-      <label for="s4" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
-    </div>
-    <div class="carousel-arrows arrows-4">
-      <label for="s3" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
-      <label for="s5" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
-    </div>
-    <div class="carousel-arrows arrows-5">
-      <label for="s4" class="carousel-arrow left" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></label>
-      <label for="s1" class="carousel-arrow right" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></label>
-    </div>
-  </div>
-</section>
-
-
-
-
-
+        </section>
 
 
 </body>
+<!-- FOOTER -->
+<footer class="bg-slate-900 mt-2.5 px-5 pt-2.5 pb-2.5">
+    <div class="max-w-[1200px] mx-auto">
+        <div class="flex justify-center flex-wrap gap-3 mb-5 max-[768px]:flex-col max-[768px]:items-center max-[768px]:gap-4">
+            <a href="#" class="text-white text-sm hover:text-cyan-400 transition-colors">Cartelera</a>
+            <a href="#" class="text-white text-sm hover:text-cyan-400 transition-colors">Cines</a>
+            <a href="#" class="text-white text-sm hover:text-cyan-400 transition-colors">Estrenos</a>
+            <a href="#" class="text-white text-sm hover:text-cyan-400 transition-colors">Noticias</a>
+            <a href="#" class="text-white text-sm hover:text-cyan-400 transition-colors">Nosotros</a>
+            <a href="#" class="text-white text-sm hover:text-cyan-400 transition-colors">Presencia y publicidad</a>
+            <a href="#" class="text-white text-sm hover:text-cyan-400 transition-colors">Productos corporativos</a>
+            <a href="#" class="text-white text-sm hover:text-cyan-400 transition-colors">Cinexclusivo</a>
+            <a href="#" class="text-white text-sm hover:text-cyan-400 transition-colors">Contáctanos</a>
+        </div>
+        <div class="text-center text-white mb-9">
+            <h3 class="text-[10px] mb-2.5 max-[768px]:text-xl">Síguenos</h3>
+            <p class="text-slate-300 mb-3">En nuestras redes sociales</p>
+            <div class="flex justify-center gap-5 max-[768px]:gap-4">
+                <a href="#" class="w-11 h-11 max-[768px]:w-10 max-[768px]:h-10 rounded-full bg-slate-800 flex items-center justify-center text-white text-lg hover:bg-cyan-400 hover:text-black transition-colors"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-11 h-11 max-[768px]:w-10 max-[768px]:h-10 rounded-full bg-slate-800 flex items-center justify-center text-white text-lg hover:bg-cyan-400 hover:text-black transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="w-11 h-11 max-[768px]:w-10 max-[768px]:h-10 rounded-full bg-slate-800 flex items-center justify-center text-white text-lg hover:bg-cyan-400 hover:text-black transition-colors"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" class="w-11 h-11 max-[768px]:w-10 max-[768px]:h-10 rounded-full bg-slate-800 flex items-center justify-center text-white text-lg hover:bg-cyan-400 hover:text-black transition-colors"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <hr class="border-t border-white/15 my-5">
+        <p class="text-slate-300 text-center text-sm max-[768px]:text-[13px] leading-relaxed">
+            Suramericana de Espectáculos S.A. RIF: J-00045832-4 <br>
+            © Copyright 2022. Cinex. Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
 </html>
