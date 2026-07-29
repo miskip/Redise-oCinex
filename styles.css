@@ -10,107 +10,16 @@
 
 body {
   background: rgb(3, 2, 2);
+  overflow-x: hidden;
 }
 
-/*
-SECCIÓN 1 header
-*/
-
-.main-header{
-    background:#0f172a;
-    padding:15px 0;
-}
-.main-header nav{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:20px;
-}
-.logo img{
-    height:35px;
-}
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-.nav-links a{
-    text-decoration:none;
-    color:white;
-    padding:10px 15px;
-    border-radius:25px;
-    font-size:14px;
-    font-weight:bold;
-}
-.nav-links a:hover{
-    background:rgba(255,255,255,.1);
-}
-.exclusive{
-    background:#22d3ee;
-    color:#111!important;
-}
-.login{
-    background:white;
-    color:#111!important;
-}
-/* ocultar checkbox */
-#menu-check{
-    display:none;
-}
-/* ocultar boton en PC */
-.menu-icon{
-    display:none;
-    color:white;
-    font-size:25px;
-    cursor:pointer;
-}
-/* 
-   PANTALLA
-*/
-
-@media(max-width:900px){
-    .main-header nav{
-        justify-content:space-between;
-        padding:0 20px;
-    }
-    /* aparece hamburguesa */
-    .menu-icon{
-        display:block;
-    }
-    /* desaparecen opciones */
-    .nav-links{
-        position:absolute;
-        top:70px;
-        left:0;
-        width:100%;
-        background:#0f172a;
-        flex-direction:column;
-        padding:20px;
-        display:none;
-        z-index:1000;
-    }
-    .nav-links a{
-        width:100%;
-        text-align:center;
-    }
-    /* cuando presiona */
-    #menu-check:checked ~ .nav-links{
-        display:flex;
-    }
-/* cambia icono visual */
-#menu-check:checked + .menu-icon i{
-    content:"";
-}
-}
 /*
 SECCIÓN 2
 */
 .banner-slider{
     width:90%;
     max-width:1400px;
-    margin:35px auto;
+    margin:5px auto;
     overflow:hidden;
     border-radius:20px;
     position:relative;
@@ -207,14 +116,15 @@ SECCIÓN 3 TOP 5
 }
 .top-section h2{
     color:white;
-    font-size:60px;
-    font-weight:950;
+    font-size:30px;
+    font-weight:700;
     margin-bottom:5px;
-    text-align:center;
+    margin-left:40px;
+    text-align:left;
 }
 .top5{
     width:100%;
-    height:520px;
+    height:300px;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -226,17 +136,17 @@ SECCIÓN 3 TOP 5
 .coverflow{
     position:relative;
     width:850px;
-    height:450px;
+    height:280px;
 }
 .card{
     position:absolute;
     width:800px;
-    height:300px;
+    height:260px;
     display:flex;
     background:#111;
     border-radius:25px;
     overflow:hidden;
-    box-shadow:0 20px 50px rgba(0,0,0,.7);
+    box-shadow:0 20px 50px rgba(23, 19, 50, 0.7);
     transition:.6s;
     opacity:0;
 }
@@ -249,17 +159,29 @@ SECCIÓN 3 TOP 5
 .card-text{
     padding:25px 35px;
     color:white;
+    min-width:0; /* permite que el texto se achique dentro del flex, en vez de desbordar */
 }
 .card-text h3{
     font-size:29px;
-    margin-bottom:20px;
+    margin-bottom:5px;
 }
 .card-text p{
     color:#ccc;
     font-size:18px;
     line-height:1.5;
+    text-align:justify;
 }
-
+.carousel-arrows{
+    position:absolute;
+    width:100%;
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
+    pointer-events:none;
+}
+.carousel-arrow{
+    pointer-events:auto;
+}
 /* 
    PELÍCULA PRINCIPAL
  */
@@ -296,11 +218,11 @@ SECCIÓN 3 TOP 5
     z-index:2;
 }
 
-/* flecha pequeña debajo */
+
 .next{
     position:absolute;
     bottom:15px;
-    left:140px;
+    left:400px;
     width:35px;
     height:35px;
     display:flex;
@@ -314,4 +236,103 @@ SECCIÓN 3 TOP 5
 .next:hover{
     color:#00ffff;
     transform:translateY(5px);
+}
+
+/*
+   RESPONSIVE
+*/
+@media (max-width: 900px) {
+  .banner-slider{ width:95%; }
+  .top-section h2{ font-size:36px; }
+  .coverflow{ width:90vw; max-width:600px; height:380px; }
+  .card{ width:90vw; max-width:600px; height:260px; }
+  .card img{ width:180px; }
+  .card-text{ padding:16px 20px; }
+  .card-text h3{ font-size:20px; margin-bottom:10px; }
+  .card-text p{ font-size:14px; line-height:1.4; }
+  #s1:checked ~ .coverflow .c2,
+  #s2:checked ~ .coverflow .c3,
+  #s3:checked ~ .coverflow .c4,
+  #s4:checked ~ .coverflow .c5,
+  #s5:checked ~ .coverflow .c1{
+      transform:translateX(70px) scale(.88);
+  }
+  #s1:checked ~ .coverflow .c3,
+  #s2:checked ~ .coverflow .c4,
+  #s3:checked ~ .coverflow .c5,
+  #s4:checked ~ .coverflow .c1,
+  #s5:checked ~ .coverflow .c2{
+      transform:translateX(120px) scale(.78);
+  }
+}
+
+@media (max-width: 600px) {
+
+  /* --- Sección 2: banner --- */
+  .banner-slider{
+      width:100%;
+      border-radius:0;
+      margin:20px auto;
+  }
+
+  /* --- Sección 3: top 5 --- */
+    .top-section h2{
+        font-size:26px;
+    }
+    .top5{
+        width:100%;
+        height:auto;
+        display:flex;
+        justify-content:center;
+        align-items:flex-start;
+        padding:20px 0;
+    }
+   .coverflow{
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content:center;
+    }
+    .card{
+        position:relative;
+        width:90%;
+        max-width:300px;
+        height:auto;
+        margin:0 auto;
+        flex-direction:column;
+    }
+    .card img{
+        width:55%;
+        max-width:180px;
+        margin:25px auto 15px;
+        display:block;
+    }
+    .card-text{
+        padding:5px;
+        text-align:center;
+    }
+
+    .card-text h3{
+        text-align:center;
+    }
+
+    .card-text p{
+        text-align:center;
+    }
+  /*  para mostrar solo la que está activa */
+  .card{
+      display:none;
+  }
+  .top-section{
+    margin-bottom:20px;
+    }
+
+  #s1:checked ~ .coverflow .c1,
+  #s2:checked ~ .coverflow .c2,
+  #s3:checked ~ .coverflow .c3,
+  #s4:checked ~ .coverflow .c4,
+  #s5:checked ~ .coverflow .c5{
+      display:flex; 
+      transform:none; 
+  }
 }
